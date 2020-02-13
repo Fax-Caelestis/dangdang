@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lxx.dao.CategoryDao">
+    <select id="queryAllOne" resultType="com.lxx.entity.DCategory">
+        select id,cate_name cateName,count,parent_id parentId,levels from dd.d_category where LEVELS=1
+    </select>
+    <select id="queryAllTwo" resultType="com.lxx.entity.DCategory">
+        select id,cate_name cateName,count,parent_id parentId,levels from dd.d_category where LEVELS=2
+    </select>
+</mapper>
